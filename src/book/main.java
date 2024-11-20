@@ -1,6 +1,7 @@
 package book;
 
 import java.util.Scanner;
+import implementation.reports;
 
 public class main {
     
@@ -10,6 +11,7 @@ public class main {
         Book b = new Book();
         Student s = new Student();
         Borrow r = new Borrow();
+        reports rs = new reports();
         
         boolean isSelected = false;
         
@@ -18,7 +20,8 @@ public class main {
             System.out.println("1. Book");
             System.out.println("2. Student");
             System.out.println("3. Borrows");
-            System.out.println("4. Exit");
+            System.out.println("4. Reports");
+            System.out.println("5. Exit");
             System.out.print("Enter selection: ");
             int select = conf.validateInt();
             
@@ -33,6 +36,9 @@ public class main {
                     r.borrowCRUD();
                     break;
                 case 4:
+                    rs.viewReport();
+                    break;
+                case 5:
                     System.out.print("Confirm exit? (yes/no): ");
                     String confirm = sc.next();
                     
