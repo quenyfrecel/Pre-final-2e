@@ -105,7 +105,7 @@ public class books {
             System.out.println("Category: "+getCateg);
             System.out.println("-------------------------------------");
             System.out.println("Status: "+getStatus);
-            
+            rs.close();
         } catch(SQLException e){
             System.out.println("Error: "+e.getMessage());
         }
